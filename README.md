@@ -1,21 +1,11 @@
-# <img src="public/icons/icon_48.png" width="45" align="left"> Refresh The Tabs-of-the-same-domain
+# Refresh the tabs of the same domain
 
-My Chrome Extension
-
-## Features
-
-- Feature 1
-- Feature 2
+One-click refresh all other tabs with the same domain as the current tab page.
 
 ## Install
 
 [**Chrome** extension]() <!-- TODO: Add chrome extension link inside parenthesis -->
 
-## Contribution
+## License
 
-Suggestions and pull requests are welcomed!.
-
----
-
-This project was bootstrapped with [Chrome Extension CLI](https://github.com/dutiyesh/chrome-extension-cli)
-
+[MIT](/LICENSE)

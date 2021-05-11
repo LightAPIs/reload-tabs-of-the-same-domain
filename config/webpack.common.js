@@ -2,9 +2,12 @@
 
 const SizePlugin = require('size-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ZipWebpackPlugin = require('zip-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const packageInfo = require('../package.json');
 
 const PATHS = require('./paths');
+const DEV = process.env.NODE_ENV === 'development';
 
 // To re-use webpack configuration across templates,
 // CLI maintains a common webpack configuration file - `webpack.common.js`.
@@ -17,7 +20,7 @@ const common = {
     // the filename template for entry chunks
     filename: '[name].js',
   },
-  devtool: 'source-map',
+  devtool: DEV ? 'source-map' : 'none',
   stats: {
     all: false,
     errors: true,
@@ -55,12 +58,18 @@ const common = {
           from: '**/*',
           context: 'public',
         },
-      ]
+      ],
     }),
     // Extract CSS into separate files
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
+    DEV
+      ? null
+      : new ZipWebpackPlugin({
+          path: PATHS.archive,
+          filename: `${packageInfo.name}_v${packageInfo.version}.zip`,
+        }),
   ],
 };
 

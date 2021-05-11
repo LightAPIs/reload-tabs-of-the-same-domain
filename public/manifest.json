@@ -1,8 +1,10 @@
 {
   "manifest_version": 2,
-  "name": "Refresh The-tabs-of-the-same-domain",
-  "version": "0.1.0",
-  "description": "My Chrome Extension",
+  "name": "__MSG_extName__",
+  "version": "1.0.0",
+  "author": "pana",
+  "description": "__MSG_extDes__",
+  "default_locale": "en",
   "icons": {
     "16": "icons/icon_16.png",
     "32": "icons/icon_32.png",
@@ -10,27 +12,11 @@
     "128": "icons/icon_128.png"
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ],
+    "scripts": ["background.js"],
     "persistent": false
   },
   "browser_action": {
-    "default_title": "Refresh The-tabs-of-the-same-domain",
-    "default_popup": "popup.html"
+    "default_title": "__MSG_extName__"
   },
-  "permissions": [
-    "storage"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "run_at": "document_idle",
-      "js": [
-        "contentScript.js"
-      ]
-    }
-  ]
+  "permissions": ["storage", "tabs"]
 }

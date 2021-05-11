@@ -1,0 +1,8 @@
+{
+  "extName": {
+    "message": "Refresh the tabs of the same domain"
+  },
+  "extDes": {
+    "message": "One-click refresh all other tabs with the same domain as the current tab page."
+  }
+}
