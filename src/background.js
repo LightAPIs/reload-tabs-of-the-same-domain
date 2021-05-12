@@ -2,20 +2,22 @@
 import { i18n, pageContextMenu } from '@/ui.js';
 import { reloadTabs } from '@/reload.js';
 
-const menus = ['bypassCache', 'includeCurrent', 'currentWindow', 'pageContext'];
-menus.forEach(menu => {
-  chrome.contextMenus.create({
-    id: menu,
-    type: 'checkbox',
-    checked: localStorage[menu] === 'true',
-    title: i18n(menu),
-    contexts: ['browser_action'],
+chrome.runtime.onInstalled.addListener(() => {
+  const menus = ['bypassCache', 'includeCurrent', 'currentWindow', 'pageContext'];
+  menus.forEach(menu => {
+    chrome.contextMenus.create({
+      id: menu,
+      type: 'checkbox',
+      checked: localStorage[menu] === 'true',
+      title: i18n(menu),
+      contexts: ['browser_action'],
+    });
   });
-});
 
-if (localStorage['pageContext'] === 'true') {
-  pageContextMenu('pageReload', true);
-}
+  if (localStorage['pageContext'] === 'true') {
+    pageContextMenu('pageReload', true);
+  }
+});
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   if (!chrome.runtime.lastError && info) {
