@@ -18,5 +18,5 @@
   "browser_action": {
     "default_title": "__MSG_extName__"
   },
-  "permissions": ["storage", "tabs"]
+  "permissions": ["tabs", "contextMenus"]
 }

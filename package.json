@@ -1,17 +1,21 @@
 {
-  "name": "refresh-the-tabs-of-the-same-domain",
+  "name": "reload-the-tabs-of-the-same-domain",
   "version": "1.0.0",
   "description": "My Chrome Extension",
   "private": true,
   "scripts": {
     "watch": "rimraf build && set NODE_ENV=development && webpack --mode=development --watch --config config/webpack.config.js",
-    "build": "rimraf build && set NODE_ENV=production && webpack --mode=production --config config/webpack.config.js"
+    "build": "rimraf build && set NODE_ENV=production && webpack --mode=production --config config/webpack.config.js",
+    "test:unit": "mochapack tests/unit/**/*.js"
   },
   "devDependencies": {
+    "chai": "^4.3.4",
     "copy-webpack-plugin": "^6.4.1",
     "css-loader": "^4.3.0",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^0.10.1",
+    "mocha": "^8.4.0",
+    "mochapack": "^2.0.6",
     "size-plugin": "^2.0.2",
     "standard-version": "^9.3.0",
     "webpack": "^4.46.0",

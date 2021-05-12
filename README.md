@@ -1,6 +1,6 @@
-# Refresh the tabs of the same domain
+# Reload tabs of the same domain
 
-One-click refresh all other tabs with the same domain as the current tab page.
+One-click reload all other tabs with the same domain as the current tab page.
 
 ## Install
 

@@ -1,8 +1,23 @@
 {
   "extName": {
-    "message": "強制在應用程式窗口中打開鏈接"
+    "message": "重載相同域名的分頁"
   },
   "extDes": {
-    "message": "使應用程式窗口內的鏈接總是在當前窗口中打開。"
+    "message": "一鍵重新載入所有與當前分頁具有相同域名的其它分頁。"
+  },
+  "bypassCache": {
+    "message": "強制重新載入"
+  },
+  "includeCurrent": {
+    "message": "包括當前分頁"
+  },
+  "currentWindow": {
+    "message": "僅重載當前視窗"
+  },
+  "pageContext": {
+    "message": "為頁面添加右鍵菜單項"
+  },
+  "pageReload": {
+    "message": "重載相同域名的分頁"
   }
 }

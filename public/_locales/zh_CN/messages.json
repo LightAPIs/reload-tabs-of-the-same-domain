@@ -1,8 +1,23 @@
 {
   "extName": {
-    "message": "重載相同域名的分頁"
+    "message": "重载相同域名的标签页"
   },
   "extDes": {
-    "message": "一鍵重新載入所有與當前分頁具有相同域名的其它分頁。"
+    "message": "一键重新加载所有与当前标签页具有相同域名的其它标签页。"
+  },
+  "bypassCache": {
+    "message": "硬性重新加载"
+  },
+  "includeCurrent": {
+    "message": "包括当前标签页"
+  },
+  "currentWindow": {
+    "message": "仅重载当前窗口"
+  },
+  "pageContext": {
+    "message": "为页面添加右键菜单项"
+  },
+  "pageReload": {
+    "message": "重载相同域名的标签页"
   }
 }

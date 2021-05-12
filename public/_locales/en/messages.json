@@ -1,8 +1,23 @@
 {
   "extName": {
-    "message": "Refresh the tabs of the same domain"
+    "message": "Reload tabs of the same domain"
   },
   "extDes": {
-    "message": "One-click refresh all other tabs with the same domain as the current tab page."
+    "message": "One-click reload all other tabs with the same domain as the current tab page."
+  },
+  "bypassCache": {
+    "message": "Hard reload"
+  },
+  "includeCurrent": {
+    "message": "Include current tab"
+  },
+  "currentWindow": {
+    "message": "Reload current window only"
+  },
+  "pageContext": {
+    "message": "Add right click menu to page"
+  },
+  "pageReload": {
+    "message": "Reload tabs of the same domain"
   }
 }

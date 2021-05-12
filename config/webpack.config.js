@@ -10,6 +10,11 @@ const config = merge(common, {
   entry: {
     background: PATHS.src + '/background.js',
   },
+  resolve: {
+    alias: {
+      '@': PATHS.src,
+    },
+  },
 });
 
 module.exports = config;

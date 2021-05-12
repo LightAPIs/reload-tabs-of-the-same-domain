@@ -1,21 +1,46 @@
 'use strict';
+import { i18n, pageContextMenu } from '@/ui.js';
+import { reloadTabs } from '@/reload.js';
 
-// With background scripts you can communicate with popup
-// and contentScript files.
-// For more information on background script,
-// See https://developer.chrome.com/extensions/background_pages
+const menus = ['bypassCache', 'includeCurrent', 'currentWindow', 'pageContext'];
+menus.forEach(menu => {
+  chrome.contextMenus.create({
+    id: menu,
+    type: 'checkbox',
+    checked: localStorage[menu] === 'true',
+    title: i18n(menu),
+    contexts: ['browser_action'],
+  });
+});
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.type === 'GREETINGS') {
-    const message = `Hi ${
-      sender.tab ? 'Con' : 'Pop'
-    }, my name is Bac. I am from Background. It's great to hear from you.`;
+if (localStorage['pageContext'] === 'true') {
+  pageContextMenu('pageReload', true);
+}
 
-    // Log message coming from the `request` parameter
-    console.log(request.payload.message);
-    // Send a response message
-    sendResponse({
-      message,
-    });
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+  if (!chrome.runtime.lastError && info) {
+    const { menuItemId, checked, wasChecked } = info;
+    switch (menuItemId) {
+      case 'bypassCache':
+      case 'includeCurrent':
+      case 'currentWindow':
+        localStorage.setItem(menuItemId, checked.toString());
+        break;
+      case 'pageContext':
+        localStorage.setItem(menuItemId, checked.toString());
+        if (checked !== wasChecked) {
+          pageContextMenu('pageReload', checked);
+        }
+        break;
+      case 'pageReload':
+        reloadTabs(tab);
+        break;
+    }
+  }
+});
+
+chrome.browserAction.onClicked.addListener(tab => {
+  if (!chrome.runtime.lastError) {
+    reloadTabs(tab);
   }
 });
