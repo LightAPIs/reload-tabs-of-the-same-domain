@@ -23,9 +23,6 @@ One-click reload all other tabs with the same domain as the current tab page.
 ### Initialization
 
 ```bash
-# Install Vue CLI
-npm install @vue/cli -g
-
 # Install clear tool
 npm install rimraf -g
 
