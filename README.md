@@ -1,10 +1,20 @@
 # Reload tabs of the same domain
 
+[![Release](https://img.shields.io/github/v/release/LightAPIs/reload-tabs-of-the-same-domain.svg?color=orange)](https://github.com/LightAPIs/reload-tabs-of-the-same-domain/releases/latest) [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/bfklflklamddmbkhgbfgpponafcaijoa?maxAge=86400)](https://chrome.google.com/webstore/detail/bfklflklamddmbkhgbfgpponafcaijoa) [![Mozilla Add-ons](https://img.shields.io/amo/v/reload-tabs-of-the-same-domain)](https://addons.mozilla.org/zh-CN/firefox/addon/reload-tabs-of-the-same-domain/) [![MIT](https://img.shields.io/badge/license-MIT-green)](/LICENSE)
+
 One-click reload all other tabs with the same domain as the current tab page.
 
 ## Install
 
-[**Chrome** extension]() <!-- TODO: Add chrome extension link inside parenthesis -->
+### Chrome
+
+- [**Chrome** extension](https://chrome.google.com/webstore/detail/bfklflklamddmbkhgbfgpponafcaijoa)
+- [Releases](https://github.com/LightAPIs/reload-tabs-of-the-same-domain/releases/latest)
+
+### Firefox
+
+- [**Mozilla** add-ons](https://addons.mozilla.org/zh-CN/firefox/addon/reload-tabs-of-the-same-domain/)
+- [Releases](https://github.com/LightAPIs/reload-tabs-of-the-same-domain/releases/latest)
 
 ## Development
 
