@@ -3,6 +3,7 @@
 
 # production
 /build
+/build-*
 /archive
 
 # misc

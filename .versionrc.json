@@ -5,7 +5,11 @@
       "type": "json"
     },
     {
-      "filename": "./public/manifest.json",
+      "filename": "./src/chrome/manifest.json",
+      "type": "json"
+    },
+    {
+      "filename": "./src/firefox/manifest.json",
       "type": "json"
     }
   ]

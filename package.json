@@ -4,8 +4,10 @@
   "description": "My Chrome Extension",
   "private": true,
   "scripts": {
-    "watch": "rimraf build && set NODE_ENV=development && webpack --mode=development --watch --config config/webpack.config.js",
-    "build": "rimraf build && set NODE_ENV=production && webpack --mode=production --config config/webpack.config.js",
+    "watch-chrome": "rimraf build-chrome && set NODE_ENV=development && webpack --mode=development --watch --config config/webpack.chrome.js",
+    "build-chrome": "rimraf build-chrome && set NODE_ENV=production && webpack --mode=production --config config/webpack.chrome.js",
+    "watch-firefox": "rimraf build-firefox && set NODE_ENV=development && webpack --mode=development --watch --config config/webpack.firefox.js",
+    "build-firefox": "rimraf build-firefox && set NODE_ENV=production && webpack --mode=production --config config/webpack.firefox.js",
     "test:unit": "mochapack tests/unit/**/*.js"
   },
   "devDependencies": {
