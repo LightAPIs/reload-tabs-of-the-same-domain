@@ -19,5 +19,6 @@
   "browser_action": {
     "default_title": "__MSG_extName__"
   },
-  "permissions": ["tabs", "contextMenus"]
+  "permissions": ["tabs", "contextMenus"],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAolE0YyvFOf7BwmZuM4dSRwaOA2J2LfUJ7hlpN+7Z8NueH3uI9UL/CpZQ/zbUJiX+hizdgCBliNGdJmwl50117pHs0T0ExqmXs8j8GVuyV+VyZBF6OKed88JMxetvx32VOPdp2xmhIu5xOTRMKWM/honfofOmH6l/NK1Qbf3gqOl7w0xMCXZIMeAZ1m6PvqJcNJ1jzpGmCQD9FiJ4nIMbIVjMe32sJGi6empLpgvjx6WykHznyLyC9wfw30oJnAiOrO9epe4ck+sf1XFi5u9UGVFd3C/kcQ80xcosaEyZN8k4dk4UT8SC1BhGNqos548ztl5ecXNTVPcVQX4bRICXrwIDAQAB"
 }
